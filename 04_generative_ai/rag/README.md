@@ -47,6 +47,7 @@ rag/
 │   ├── model.py                   # LLM initialization and LCEL chain 
 │   ├── test_model.py              # Unit tests
 └── venv/                          # Isolated virtual environment
+```
 
 ---
 
@@ -61,8 +62,10 @@ cd rag
 **2. Create and activate a Python virtual environment:**
 ```bash
 python -m venv venv
+
 # On Windows:
 venv\Scripts\activate
+
 # On Mac/Linux:
 source venv/bin/activate
 ```
