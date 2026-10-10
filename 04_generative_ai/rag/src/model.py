@@ -27,6 +27,7 @@
 #           * sends the filled prompt to the Groq LLM, 
 #           * and finally parses the output into a clean string using StrOutputParser.
 
+# Import required libraries
 import os
 from langchain_groq import ChatGroq
 from langchain_core.prompts import PromptTemplate
@@ -38,7 +39,7 @@ class GenerationPipeline:
     # Handles LLM initialization, prompt construction, and the LCEL generation chain.
     
     #
-    def __init__(self, retriever, model_name: str = "llama3-8b-8192"):
+    def __init__(self, retriever, model_name: str = "openai/gpt-oss-20b"):
 
         self.retriever = retriever
 
