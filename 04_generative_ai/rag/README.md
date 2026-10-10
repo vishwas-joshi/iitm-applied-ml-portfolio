@@ -30,26 +30,23 @@ This repository demonstrates the pipeline in action using a published **TORQUE c
 
 ```text
 rag/
-├── .env                       # Environment variables (GROQ_API_KEY)
-├── .gitignore                 # Excludes venv, databases, and secrets
-├── README.md                  # Project documentation
-├── requirements.txt           # Curated dependency list
+├── .env                           # Environment variables (GROQ_API_KEY)
+├── .gitignore                     # Excludes venv, databases, and secrets
+├── README.md                      # Project documentation
+├── requirements.txt               # Curated dependency list
 ├── data/
-│   ├── chroma_db/             # Local vector database storage
+│   ├── chroma_db/                 # Local vector database storage
 │   └── torque_research_paper.pdf  # Source document for ingestion
 ├── notebooks/
-│   └── 01_rag_pipeline.ipynb  # Executive orchestration layer
+│   └── 01_rag_pipeline.ipynb      # Executive orchestration layer
 ├── src/
-│   ├── data.py                # Document loading and chunking 
-│   ├── test_data.py           # Unit tests
-│   ├── vector_store.py        # Embeddings and MMR retriever 
-│   ├── test_vector_store.py   # Unit tests
-│   ├── model.py               # LLM initialization and LCEL chain 
-│   ├── test_model.py          # Unit tests
-│   └── uuid_utils/            # Pure-Python dependency mock
-│       ├── __init__.py
-│       └── compat.py
-└── venv/                      # Isolated virtual environment
+│   ├── data.py                    # Document loading and chunking 
+│   ├── test_data.py               # Unit tests
+│   ├── vector_store.py            # Embeddings and MMR retriever 
+│   ├── test_vector_store.py       # Unit tests
+│   ├── model.py                   # LLM initialization and LCEL chain 
+│   ├── test_model.py              # Unit tests
+└── venv/                          # Isolated virtual environment
 
 
 ## 🚀 Setup & Installation
