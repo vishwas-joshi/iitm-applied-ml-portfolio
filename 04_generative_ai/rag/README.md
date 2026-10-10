@@ -48,6 +48,7 @@ rag/
 │   ├── test_model.py              # Unit tests
 └── venv/                          # Isolated virtual environment
 
+---
 
 ## 🚀 Setup & Installation
 
