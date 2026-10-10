@@ -1,3 +1,29 @@
+# Description: 
+#
+# 'data.py' does below things:
+#
+# 1. Validates the File Path: 
+#       - Checks if the target PDF document actually exists on the system before attempting to process it, 
+#         preventing pipeline crashes.
+#
+# 2. Ingests the PDF: 
+#       - Uses LangChain's PyPDFLoader to extract the raw text and metadata (like page numbers) from the 
+#         input document.
+#
+# 3. Chunks the Text: 
+#       - Passes the extracted document through a 'RecursiveCharacterTextSplitter' to break massive blocks of 
+#         text into smaller, mathematically sized pieces (1000 characters). 
+#       - This is necessary because LLMs have restricted context windows.
+#
+# 4. Applies Semantic Overlap: 
+#       - Forces a 200-character overlap between sequential chunks. 
+#       - This ensures that a sentence or concept cut in half by the chunker retains its surrounding context, 
+#         preventing information loss at the seams.
+#
+# 5. Orchestrates the Output: 
+#       - Combines these steps into a single process() pipeline that returns a clean list of structured 
+#         Document objects, perfectly formatted for the vector database to embed.
+
 # Import required libraries
 import os
 from langchain_community.document_loaders import PyPDFLoader
